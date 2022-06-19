@@ -5,6 +5,6 @@ def starting_page(request):
     return render(request, "blog/index.html")
 
 def post(request):
-    pass
+    return render(request, "blog/all-posts.html")
 def post_detail(request):
     pass
