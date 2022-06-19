@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>  {% block title  %}{% endblock  %}</title>
+    <link rel ="stylesheet" href="{% static 'app.css' %}">
+    {% block css_files %}
+    {% endblock  %}
+  </head> 
+
+  <body>
+    {% block content %}{% endblock  %}
+    <script src="js/scripts.js"></script>
+  </body> 
+</html> 
