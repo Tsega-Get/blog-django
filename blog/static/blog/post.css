@@ -18,9 +18,12 @@
 }
 
 #main-navigation h1 a:hover,
-#main-navigation h1 a:active {
+#main-navigation h1 a:active,
+#main-navigation nav a:hover,
+#main-navigation nav a:active {
     color: #cf79f1;
 }
+
 
 .post {
     display: flex;
