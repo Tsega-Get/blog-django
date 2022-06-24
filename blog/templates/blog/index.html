@@ -18,7 +18,7 @@
     <div class="welcomcontent">
     <header>
         <img src="{% static 'blog/images/grace.jpg' %}" alt= "Grace - The Author of this blog"/>
-        <h2> Tsegazeab's Blog </h2>
+        <h2> Grace's Blog </h2>
     </header>
     <p> Hi, I am Grace and I love to blog about tech and the world!</p>
     <br><br>
@@ -27,7 +27,9 @@
 <section id = "latest-posts">
     <h2>My Latest Thoughts</h2>
     <ul>
-     {% include 'blog/includes/post.html' %}
+     {% for post in posts %}
+       {% include 'blog/includes/post.html' %}
+     {% endfor %}
  </ul>
     
 </section>

@@ -2,7 +2,7 @@
 
     margin-top: 30px;
     background: linear-gradient(to right top, #6305dd, #390281);
-    padding: 1rem, 12%;
+    padding: 1rem, 20%;
     /* border-radius: 12px; */
 }
 
@@ -34,9 +34,16 @@
 }
 
 #welcome h2 {
-    font-size: 3.5rem;
+    font-size: 1rem;
     margin: 0 0 0 2rem;
-    color: #e4e4e4;
+    color: white;
+    width: 10rem;
+}
+
+#welcome h3 {
+    font-size: 2rem;
+    margin: 0 0 0 2rem;
+    color: white;
     width: 10rem;
 }
 
@@ -48,10 +55,10 @@
 #latest-posts {
     /* margin-top: 400px; */
     background-color: white;
-    padding: 3rem;
+    padding: 1rem;
     border-radius: 12px;
     width: 60rem;
-    margin: -1rem auto 2rem auto;
+    margin: -6rem auto 2rem auto;
     box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.4);
 
 }

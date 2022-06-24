@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-This Post title
+{{post.title}}
 {% endblock  %}
 
 
@@ -12,36 +12,16 @@ This Post title
 
 {% block  content%}
 <section id="summary">
-  <h2>Post Title</h2>
+  <h2>{{post.title }} </h2>
        <article>
-        <img src="{% static 'blog/images/mauntain_01.jpg' %}" alt="Post Ttle"/>
-        <address>By Grace</address>
-        <div>Last updated on <time>June 24th</time>
+        <img src="{% static 'blog/images/'|add:post.image %}" alt="{{post.title}}"/>
+        <address>{{post.author}}</address>
+        <div>Last updated on <time>{{post.date|date:"d M Y"}}</time>
         </div>
        </article>
 </section>
 <main>
-<p>
-  "Hiking" is the preferred term in Canada and the United States; 
-  the term "walking" is used in these regions for shorter, particularly urban walks. 
-  In the United Kingdom and the Republic of Ireland, the word "walking" describes 
-  all forms of walking, whether it is a walk in the park or backpacking in the Alps.
-</p>
-<p>
-  
-  The word hiking is also often used in the UK, along with rambling (a slightly old-fashioned term), 
-  hillwalking, and fell walking (a term mostly used for hillwalking in northern England). 
-</p>
-<p>
-  
-  The term bushwalking is endemic to Australia, having been adopted by the Sydney 
-  Bush Walkers club in 1927.
-  Hiking is a long, vigorous walk, usually on trails or footpaths in the countryside.
-  Walking for pleasure developed in Europe during the eighteenth century.[1] Religious
-  pilgrimages have existed much longer but they involve walking long distances for a spiritual
-  purpose associated with specific religions.
-</p> 
-
+{{post.content|linebreaks}}
 
 </main>
 {% endblock  %} 
