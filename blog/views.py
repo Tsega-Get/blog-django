@@ -1,6 +1,10 @@
 from xml.dom.minidom import Identified
 from django.shortcuts import render
+from django.urls import reverse
 from datetime import date
+from django.http import Http404, HttpResponse, HttpResponseNotFound, HttpResponsePermanentRedirect
+from django.template.loader import render_to_string
+
 
 all_posts = [
     {
@@ -81,7 +85,13 @@ def posts(request):
     })
 
 def post_detail(request, slug):
-    identified_posts = next(post for post in all_posts if post['slug']==slug)
-    return render(request, "blog/post-detail.html", {
-        "post" : identified_posts
-    })
+    try:
+        identified_posts = next(post for post in all_posts if post['slug']==slug)
+        return render(request, "blog/post-detail.html", {
+            "post" : identified_posts
+        })
+    except:
+       # raise Http404()
+       response_data =  render_to_string("404.html") 
+       return HttpResponseNotFound(response_data) 
+            
