@@ -48,6 +48,7 @@ body {
 #summary h2 {
     color: white;
     font-size: 4.5rem;
+    margin-bottom: 0.25rem;
 }
 
 #summary article {
@@ -73,6 +74,11 @@ body {
     font-weight: bold;
 }
 
+#summary address a {
+    color: #e7e7e7;
+    text-decoration: none;
+}
+
 #summary time {
     font-weight: bold;
 }
@@ -86,4 +92,11 @@ main {
     position: relative;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     /* height: 22rem; */
+}
+
+.tags {
+    background-color: white;
+    color: #390281;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
 }
