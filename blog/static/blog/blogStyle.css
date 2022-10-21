@@ -1,7 +1,7 @@
 #welcome {
 
     margin-top: 30px;
-    background: linear-gradient(to right top, #6305dd, #390281);
+    background: linear-gradient(to right top, #1d5285, #94c2e9);
     padding: 1rem, 20%;
     /* border-radius: 12px; */
 }
@@ -34,7 +34,7 @@
 }
 
 #welcome h2 {
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin: 0 0 0 2rem;
     color: white;
     width: 10rem;
