@@ -4,7 +4,9 @@ from . import views
 urlpatterns = [
     path("", views.StartingPageView.as_view(), name="starting-page"),
     path("posts",views.AllPostsView.as_view(), name="posts-page"),
-    # path("admin", views.post name="admin-page"),
+    
+    
     path("posts/<slug:slug>",views.SinglePostsView.as_view(),name="posts-detail-page"), #/posts/my-first-post
-    path("read-later", views.ReadLaterView.as_view(),name="read-later")
+    path("read-later", views.ReadLaterView.as_view(),name="read-later"),
+    # path("admin", views.AdminsView.as_view(), name="admin"),
 ]
